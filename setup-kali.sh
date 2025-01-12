@@ -40,17 +40,17 @@ pause() {
         #print "[.] Downloading..."
         #git clone https://github.com/MCFDev/dotfiles-and-more $HOME
         # Make symbolic link for tools so it's easier to modify them in the future if needed
-        # ln -s $Tools_dir/tools/ovpn-connect /bin
+        #ln -s $Tools_dir/tools/ovpn-connect /bin
     #fi
 
 #}
 
 setup_zsh(){
-    print "[.] Making sure user shell is set to ZSH"
+    print "[.] Making sure user shell is set to ZSH\n"
     chsh -s /bin/zsh
-    print "[.] Installing oh-my-zsh"
+    print "[.] Installing oh-my-zsh\n"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    print "[.] Installing the .zshrc."
+    print "[.] Installing the .zshrc.\n"
     cp $Tools_dir/.zshrc $HOME
 }
 
@@ -68,7 +68,7 @@ print "\n[-] Installing Packages\n"
 apt install -y $Packages
 print "\n[!]Reboot might be needed\n"
 setup_zsh
-check_tools_dir
+#check_tools_dir
 
 print "${color_Y}[!]Done. Reboot to make sure everything is working properly.${color_N}"
 
