@@ -40,7 +40,7 @@ pause() {
         #print "[.] Downloading..."
         #git clone https://github.com/MCFDev/dotfiles-and-more $HOME
         # Make symbolic link for tools so it's easier to modify them in the future if needed
-        # ln -s $Tools_dir/tools/ovpntool /bin
+        # ln -s $Tools_dir/tools/ovpn-connect /bin
     #fi
 
 #}
