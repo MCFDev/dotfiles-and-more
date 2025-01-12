@@ -31,19 +31,19 @@ pause() {
     read -s
 }
 
-check_tools_dir(){
+#check_tools_dir(){
     # Check for Tools dir if it doesn't exist git clone it
     # This is so i can either git clone the repo or curl the sh script
 
-    if [ ! -d "$Tools_dir" ]; then
-        print "[!] Tools are not downloaded."
-        print "[.] Downloading..."
-        git clone https://github.com/MCFDev/dotfiles-and-more $HOME
+    #if [ ! -d "$Tools_dir" ]; then
+        #print "[!] Tools are not downloaded."
+        #print "[.] Downloading..."
+        #git clone https://github.com/MCFDev/dotfiles-and-more $HOME
         # Make symbolic link for tools so it's easier to modify them in the future if needed
-        ln -s $Tools_dir/tools/ovpntool /bin
-    fi
+        # ln -s $Tools_dir/tools/ovpntool /bin
+    #fi
 
-}
+#}
 
 setup_zsh(){
     print "[.] Making sure user shell is set to ZSH"
